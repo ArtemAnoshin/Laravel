@@ -37,3 +37,13 @@ Place in /public directory
     RewriteRule ^ index.php [L]
 </IfModule>
 ```
+
+## DB Prefix
+.env
+```
+DB_TABLE_PREFIX=abc
+```
+and in config/database.php
+```
+'prefix' => env('DB_TABLE_PREFIX', 'abc')
+```
